@@ -24,6 +24,7 @@ No* criarNo(int valor) {
 
     return novo;
 }
+
 //Etapa 3 — Inserção na ABB
 //A inserção é o coração da árvore.
 //Regras:
@@ -44,7 +45,6 @@ No* inserir(No *raiz, int valor) {
         raiz->dir = inserir(raiz->dir, valor);
     }
     return raiz;
-    
 }
 
 void emOrdem(No *raiz) {
@@ -55,34 +55,75 @@ void emOrdem(No *raiz) {
     }
 }
 
-void empreOrdem(No *raiz){
-    if(raiz != NULL) {
-        printf("%d ", raiz->valor);
-        empreOrdem(raiz->esq);
-        empreOrdem(raiz->dir);
-    }
-}
+//pre ordem ???
 
-void emposOrdem(No *raiz){
-    if(raiz != NULL) {
-        emposOrdem(raiz->esq);
-        emposOrdem(raiz->dir);
-        printf("%d ", raiz->valor);
-    }
-}
+//pos ordem ???
 
 No* buscar(No *raiz, int valor) {
-
     if (raiz == NULL || raiz->valor == valor) {
         return raiz;
     }
-
     if (valor < raiz->valor) {
         return buscar(raiz->esq, valor);
     }
-
     return buscar(raiz->dir, valor);
 }
+
+//Remoção
+//Remoção
+No* remover(No *raiz, int valor) {
+    No *temp = NULL;
+    // árvore vazia
+    if (raiz == NULL) {
+        return NULL;
+    }
+
+    // busca do nó
+    if (valor < raiz->valor) {
+        raiz->esq = remover(raiz->esq, valor);
+    }
+
+    else if (valor > raiz->valor) {
+        raiz->dir = remover(raiz->dir, valor);
+    }
+
+    // encontrou o nó
+    else {
+        
+        // CASO 1 - sem filhos
+        if (raiz->esq == NULL && raiz->dir == NULL) {
+
+            free(raiz);
+
+            return NULL;
+        }
+
+        // CASO 2 - um filho à direita
+        else if (raiz->esq == NULL) {
+
+            temp = raiz->dir;
+
+            free(raiz);
+
+            return temp;
+        }
+
+        // CASO 2 - um filho à esquerda
+        else if (raiz->dir == NULL) {
+
+            temp = raiz->esq;
+
+            free(raiz);
+
+            return temp;
+        }
+    raiz->dir = temp;
+    //raiz->valor = temp->valor;
+    return raiz;
+}
+}
+
+
 int main() {
 
     No *raiz = NULL;
@@ -94,21 +135,18 @@ int main() {
     raiz = inserir(raiz, 40);
     raiz = inserir(raiz, 60);
     raiz = inserir(raiz, 80);
+    raiz = inserir(raiz, 90);
+    raiz = inserir(raiz, 35);
+    raiz = inserir(raiz, 25);
 
     
-    int valor;
+    printf("Antes de remover elementos:\n");
+    emOrdem(raiz);
 
-    printf("\n\nDigite um valor para buscar: ");
-    scanf("%d", &valor);
+    raiz = remover(raiz, 80);
 
-    No *resultado = buscar(raiz, valor);
-
-    if (resultado != NULL) {
-        printf("Valor encontrado!\n");
-    }
-    else {
-        printf("Valor nao encontrado!\n");
-    }
+    printf("\n\nDepois de remover elemento:\n");
+    emOrdem(raiz);
 
     return 0;
 }
