@@ -1,0 +1,59 @@
+Lista de Exercícios — Estruturas de Dados
+Conteúdo: Árvores Binárias de Busca
+
+01. Em uma ABB:
+a) Valores menores ficam à direita
+b) Valores maiores ficam à esquerda
+                c) Valores menores ficam à esquerda e maiores à direita
+d) Não existe ordenação
+
+
+
+02. Qual percurso em uma ABB retorna os valores ordenados?
+a) Pré-ordem
+b) Pós-ordem
+                c) Em ordem
+d) Largura
+
+
+
+03. A complexidade média de busca em uma ABB balanceada é:
+a) O(1)
+                b) O(log n)
+c) O(n²)
+d) O(n!)
+
+
+
+04. Quando uma ABB se torna degenerada:
+a) Todos os nós possuem dois filhos
+                b) Ela se comporta como uma lista encadeada
+c) Não existem folhas
+d) Todos os valores são iguais
+ 
+
+
+05. Explique como funciona a inserção em uma ABB.
+R:A inserção começa pela raiz. Se o valor a ser inserido for menor que o nó atual, segue para a esquerda; se for maior, segue para a direita.
+
+
+
+06. Explique como funciona a busca em uma ABB.
+R:A busca inicia na raiz. Se o valor procurado for igual ao nó atual, ele é encontrado. Se for menor, a busca continua na subárvore esquerda; se for maior, na subárvore direita.
+
+
+07. Explique os três casos de remoção em ABB:
+- remoção de folha
+    R:Quando o nó não possui filhos, basta removê-lo.
+
+- remoção de nó com um filho
+    R:O filho do nó removido assume sua posição.
+
+- remoção de nó com dois filhos
+    R: O nó é substituído pelo seu sucessor em ordem (menor valor da subárvore direita) ou pelo predecessor em ordem (maior valor da subárvore esquerda).
+
+08. Qual a principal vantagem de uma ABB em relação a uma árvore binária comum?
+    R:Os elementos ficam organizados de acordo com seus valores, permitindo buscas, inserções e remoções mais rápidas.
+
+09. Explique o problema do desbalanceamento em ABB.
+    R:Muitos nós ficam concentrados em um dos lados da árvore.
