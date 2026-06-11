@@ -1,0 +1,3 @@
+24. Explique por que a recursão é muito utilizada em árvores.
+
+R:Uma árvore grande é apenas uma coleção de várias árvores menores (subárvores). Como o padrão se repete, não precisará criar um código complexo para a árvore inteira. Basta reaproveitar o que já foi criado.

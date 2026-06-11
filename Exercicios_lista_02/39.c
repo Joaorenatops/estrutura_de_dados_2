@@ -1,0 +1,74 @@
+//Implemente a estrutura de um nó de árvore binária em C.
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct No {
+    
+    int valor;
+    struct No *esq;
+    struct No *dir;
+
+} No;
+
+// Função auxiliar para criar o nó
+No* criarNo(int valor) {
+    No *novo = (No*) malloc(sizeof(No));
+    novo->valor = valor;
+    novo->esq = NULL;
+    novo->dir = NULL;
+    return novo;
+}
+
+No* inserir(No *raiz, int valor) {
+    // árvore vazia
+    if (raiz == NULL) {
+        return criarNo(valor);
+    }
+    // inserção à esquerda
+    if (valor < raiz->valor) {
+        raiz->esq = inserir(raiz->esq, valor);
+    }
+    // inserção à direita
+    else if (valor > raiz->valor) {
+        raiz->dir = inserir(raiz->dir, valor);
+    }
+    return raiz;
+}
+
+void emOrdem(No *raiz) {
+    if (raiz != NULL) {
+        emOrdem(raiz->esq);
+        printf("%d ", raiz->valor);
+        emOrdem(raiz->dir);
+    }
+}
+
+void preOrdem(No *raiz) {
+    if (raiz != NULL) {
+        printf("%d ", raiz->valor);
+        preOrdem(raiz->esq);
+        preOrdem(raiz->dir);
+    }
+}
+int main(){
+    No *raiz = NULL;
+
+    raiz = inserir(raiz, 50);
+    raiz = inserir(raiz, 30);
+    raiz = inserir(raiz, 70);
+    raiz = inserir(raiz, 20);
+    raiz = inserir(raiz, 40);
+    raiz = inserir(raiz, 60);
+    raiz = inserir(raiz, 80);
+    raiz = inserir(raiz, 90);
+    raiz = inserir(raiz, 35);
+    raiz = inserir(raiz, 25);
+
+    printf("Antes de remover elementos (Em-Ordem):\n");
+    emOrdem(raiz);
+
+    printf("\n\nPercurso em Pre-Ordem:\n");
+    preOrdem(raiz);
+
+    return 0;
+}

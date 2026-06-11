@@ -1,0 +1,93 @@
+Lista de Exercícios — Estruturas de Dados
+Conteúdo: Árvores Binárias
+
+01. Uma árvore binária é uma árvore em que:
+a) Todos os nós possuem exatamente dois filhos
+                b) Cada nó pode possuir no máximo dois filhos
+c) Todos os níveis possuem dois nós
+d) Existem apenas dois níveis
+
+
+
+02. Em uma árvore binária:
+a) Existe apenas filho esquerdo
+b) Existe apenas filho direito
+                c) Cada nó pode ter filho esquerdo e direito
+d) Não existem folhas
+
+
+
+03. Qual percurso visita:
+Raiz → Esquerda → Direita?
+a) Em ordem
+b) Pós-ordem
+            c) Pré-ordem
+d) Largura
+
+
+
+04. Qual percurso visita:
+Esquerda → Raiz → Direita?
+            a) Pré-ordem
+b) Em ordem
+c) Pós-ordem
+d) Profundidade
+
+
+
+05. Qual percurso visita:
+Esquerda → Direita → Raiz?
+             a) Pós-ordem
+b) Pré-ordem
+c) Em ordem
+d) Sequencial
+
+
+
+06. Uma árvore binária completa:
+a) Possui apenas folhas
+                b) Possui todos os níveis completos, exceto possivelmente o último
+c) Não possui raiz
+d) Possui apenas dois nós
+
+
+
+07. Explique a diferença entre:
+- árvore binária cheia : Todos os nós internos possuiem dois filhos, e as 
+folhas não possuem filho.
+
+- árvore binária completa : Todos os níveis estão completos, exceto o último que deve ser preenchido da esquerda para a direita
+
+
+
+08. Explique as diferenças entre os percursos:
+- pré-ordem -> Visitamos os nós na ordem  raiz - esq - dir
+- em ordem -> Visitamos os nós na ordem  esq - raiz - dir.
+- pós-ordem  -> Visitamos os nós na ordem  esq - dir - raiz.
+
+
+
+09. Em quais situações árvores binárias são mais eficientes que vetores?
+
+R: Árvores binárias são mais eficientes quando há muitas operações de busca, inserção e remoção de dados.
+
+
+10. Desenhe uma árvore binária com 10 nós e realize:
+
+          A
+        /   \
+       B     C
+      / \   / \
+     D   E F   G
+    / \ /
+   H  I J
+
+
+- percurso pré-ordem
+A, B, D, H, I, E, J, C, F, G
+
+- percurso em ordem
+H, D, I, B, J, E, A, F, C, G
+
+- percurso pós-ordem
+H, I, D, J, E, B, F, G, C, A
