@@ -1,61 +1,147 @@
-Lista de Exercícios — Estruturas de Dados
-Conteúdo: Árvores Binárias
+PARTE 1 — ÁRVORES (Questões Conceituais)
 
-01. Uma árvore binária é uma árvore em que:
-a) Todos os nós possuem exatamente dois filhos
-----------------------------------------------
-B) Cada nó pode possuir no máximo dois filhos
-----------------------------------------------
-c) Todos os níveis possuem dois nós
-d) Existem apenas dois níveis
+1. Uma árvore é uma estrutura de dados:
+a) Linear
+b) Sequencial
+                c) Não linear
+d) Circular
 
-02. Em uma árvore binária:
-a) Existe apenas filho esquerdo
-b) Existe apenas filho direito
----------------------------------------------
-C) Cada nó pode ter filho esquerdo e direito
----------------------------------------------
-d) Não existem folhas
 
-03. Qual percurso visita:
-Raiz → Esquerda → Direita?
-a) Em ordem
-b) Pós-ordem
-c) Pré-ordem
-d) Largura
 
-04. Qual percurso visita:
-Esquerda → Raiz → Direita?
-a) Pré-ordem
-b) Em ordem
-c) Pós-ordem
-d) Profundidade
+2. O nó que não possui pai é chamado de:
+a) Folha
+                b) Raiz
+c) Interno
+d) Descendente
 
-05. Qual percurso visita:
-Esquerda → Direita → Raiz?
-a) Pós-ordem
-b) Pré-ordem
-c) Em ordem
-d) Sequencial
 
-06. Uma árvore binária completa:
-a) Possui apenas folhas
-b) Possui todos os níveis completos, exceto possivelmente o último
-c) Não possui raiz
-d) Possui apenas dois nós
 
-07. Explique a diferença entre:
-- árvore binária cheia
-- árvore binária completa
+3. Os nós que não possuem filhos são chamados de:
+a) Raiz
+b) Internos
+                c) Folhas
+d) Subárvores
 
-08. Explique as diferenças entre os percursos:
-- pré-ordem
-- em ordem
-- pós-ordem
 
-09. Em quais situações árvores binárias são mais eficientes que vetores?
 
-10. Desenhe uma árvore binária com 10 nós e realize:
-- percurso pré-ordem
-- percurso em ordem
-- percurso pós-ordem
+4. A altura de uma árvore corresponde:
+a) Número total de nós
+b) Quantidade de folhas
+                c) Maior caminho da raiz até uma folha
+d) Número de subárvores
+
+
+
+5. O grau de um nó corresponde:
+a) Quantidade de ancestrais
+                b) Quantidade de filhos
+c) Altura da árvore
+d) Quantidade de folhas
+
+
+
+6. Uma árvore com apenas um nó possui:
+a) Altura 0
+                b) Altura 1
+c) Grau 2
+d) Nenhuma folha
+
+
+
+7. Qual estrutura representa melhor relações hierárquicas?
+a) Vetores
+b) Pilhas
+c) Filas
+                d) Árvores
+
+
+
+8. Qual das aplicações abaixo utiliza árvores?
+                a) Sistema de arquivos
+b) Navegador web
+c) Calculadora simples
+d) Impressora
+
+
+
+9. Explique com suas palavras o que é uma árvore em estruturas de dados.
+        R: É uma estrutura de dados não linear baseada na hierarquia de nós.
+
+
+
+10. Diferencie:
+- nó raiz -  Nó espercial que está no topo e não possui Pai.
+- nó folha - Nós que não têm filhos.
+- nó interno - Nós que têm pelo menos um filho.
+
+
+
+11. Explique o conceito de ancestral e descendente de árvores.
+    R: Ancestral é qual nó em cima do outro até a raiz.
+    R: Descendente é qualquer nó abaixo de outro.
+
+
+
+12. O que é profundidade de um nó?
+    R: É a quantidade de ligações entre o nó e a raiz(nível).
+
+
+
+13. Explique a diferença entre grau de um nó e grau de uma árvore.
+    R: O grau de um nó corresponde a quantidade de filhos que ele possui.
+    R: O grau de uma árvore é o maior grau de todos.
+
+
+
+14. Qual a importância das árvores para sistemas computacionais modernos?
+    R: São importantes por que permitem organizar, armazenar e buscar informações de forma eficiente e hierarquica.
+
+
+
+15. Desenhe uma árvore com:
+- 1 nó raiz
+- 3 níveis
+- pelo menos 8 nós
+
+
+     D
+   /    F
+  C   /
+ / \ E
+A     \ 
+ \      G
+   B    
+    \
+      H
+
+
+Indique:
+- folhas - H, G e F 
+- altura - Altura 3
+- grau da árvore - 2
+
+
+
+
+PARTE 2 — IMPLEMENTAÇÃO DE ÁRVORES
+
+16. Implemente em linguagem C uma estrutura de nó para uma árvore genérica.
+
+17. Crie uma função que inicializa uma árvore vazia.
+
+18. Implemente uma função para inserir filhos em um nó.
+
+19. Implemente uma função que conte quantos nós existem em uma árvore.
+
+20. Implemente uma função recursiva para calcular a altura de uma árvore.
+
+21. Faça uma função que conte quantas folhas existem em uma árvore.
+
+22. Implemente uma função que verifique se um valor existe na árvore.
+
+23. Crie uma função que imprima os nós por nível.
+
+24. Explique por que a recursão é muito utilizada em árvores.
+
+25. Implemente uma função para destruir/liberar toda a árvore da memória.
+
