@@ -55,6 +55,22 @@ void emOrdem(No *raiz) {
     }
 }
 
+void preOrdem(No *raiz) {
+    if (raiz != NULL){
+        print("%d",raiz->valor);
+        preOrdem(raiz->esq);
+        preOrdem(raiz->dir);
+    }
+}
+
+void posOrdem(No *raiz) {
+    if(raiz != NULL){
+        posOrdem(raiz->esq);
+        posOrdem(raiz->dir);
+        print("%d",raiz->valor);
+    }
+}
+
 //pre ordem ???
 
 //pos ordem ???

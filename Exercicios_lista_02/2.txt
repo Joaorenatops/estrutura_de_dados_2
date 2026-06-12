@@ -28,8 +28,8 @@ d) Largura
 
 04. Qual percurso visita:
 Esquerda → Raiz → Direita?
-            a) Pré-ordem
-b) Em ordem
+a) Pré-ordem
+            b) Em ordem
 c) Pós-ordem
 d) Profundidade
 
@@ -68,7 +68,6 @@ folhas não possuem filho.
 
 
 09. Em quais situações árvores binárias são mais eficientes que vetores?
-
 R: Árvores binárias são mais eficientes quando há muitas operações de busca, inserção e remoção de dados.
 
 
